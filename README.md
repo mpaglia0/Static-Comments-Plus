@@ -24,7 +24,7 @@ On the template side, you just have to add a section for the comments to your
 
     {% if STATIC_COMMENTS %}
     <section id="comments" class="body">
-    <h2>Comments!</h2>
+    <h2>{{ 'Comments!'|gettext(DEFAULT_LANG) }}</h2>
     {{ article.metadata.static_comments }}
     </section>
     {% endif %}
