@@ -3,7 +3,7 @@ Enhanced Static Comments
 
 An advanced, more complete version of Pelican [Static Comments](https://github.com/getpelican/pelican-plugins/tree/master/static_comments) plugin.
 
-> Needs a hosting server with PHP!
+>:warning: Needs a hosting server with PHP!
 
 This plugin allows you to add static comments to an article. By default the
 plugin looks for the comments of each article in a local file named
