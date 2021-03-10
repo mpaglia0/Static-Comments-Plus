@@ -20,7 +20,7 @@ Set the ``STATIC_COMMENTS_FMT`` parameter to ``rst`` if you will use reST for fo
 or ``md`` if you will format comments using markdown. Default is ``rst``.
 
 On the template side, you just have to add a section for the comments to your
-``article.html``, as in this example::
+``article.html``, as in this example:
 
     {% if STATIC_COMMENTS %}
     <section id="comments" class="body">
@@ -30,4 +30,5 @@ On the template side, you just have to add a section for the comments to your
     {% endif %}
 
 Here is an example of usage:
+
 TODO
