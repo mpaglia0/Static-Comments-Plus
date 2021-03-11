@@ -37,7 +37,7 @@ On the template side, you just have to add a section for the comments to your
       {% endif %}
     {% endif %}
 
-If you want to use the PHP part of this plugin you need to copy and configure the ``static/php/send-comments.php`` file.
+If you want to use the PHP part of this plugin you need to copy and configure the ``static/php/send-comment.php`` file.
 
 TODO: publish a template form
 
