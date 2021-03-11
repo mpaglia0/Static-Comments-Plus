@@ -3,7 +3,7 @@ Static Comments Plus
 
 An advanced, more complete version of Pelican [Static Comments](https://github.com/getpelican/pelican-plugins/tree/master/static_comments) plugin.
 
->:warning: For form sending, needs a hosting server with PHP!
+>:warning: If you want to use the 'send form' function, a hosting server with PHP is needed!
 
 This plugin allows you to add static comments to an article.
 
@@ -11,8 +11,8 @@ By default the plugin looks for the comments of each article in a local file nam
 ``Pelican_root_dir/comments/{slug}.md/rst``, where ``{slug}`` is the value of the slug tag for the
 article. The comments file should be formatted using ``markdown`` (.md) or ``reST`` (.rst).
 
-The comment will be delivered to your mailbox (optional) and you have to add it to the a.m. file. Basically it is
-the same logic of a moderation queue.
+The comment will be delivered to your mailbox (optional: PHP enabled server needed) and you have to add it to the a.m. file. Basically it is
+the same logic of a moderation queue. Viceversa you can ask your visitors to send comments via email like Static Comments default behaviour.
 
 Set the ``STATIC_COMMENTS`` parameter to True to enable the plugin. Default is
 False.
@@ -36,6 +36,10 @@ On the template side, you just have to add a section for the comments to your
         <h2>{{ 'Would you like to be the first to leave a comment?'|gettext(DEFAULT_LANG) }}</h2>
       {% endif %}
     {% endif %}
+
+If you want to use the PHP part of this plugin you need to copy and configure the ``static/php/send-comments.php`` file.
+
+TODO: publish a template form
 
 Here is an example of usage:
 
