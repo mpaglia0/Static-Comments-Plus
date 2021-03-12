@@ -13,7 +13,7 @@ article. The comments file should be formatted using ``markdown`` (.md) or ``reS
 The comment will be delivered to your mailbox (optional: PHP capable server needed) and you have to add it manually to the a.m. file. Basically it is
 the same logic of a moderation queue... Viceversa, you can ask your visitors to send comments via email like Static Comments default behaviour.
 
-PHP function and HTML form can be activated setting the parameter ``STATIC_COMMENTS_ACT`` to ``True``.
+PHP function and HTML form can be activated setting the parameter ``STATIC_COMMENTS_PLS`` to ``True``.
 
 Set the ``STATIC_COMMENTS`` parameter to ``True`` to enable the plugin. Default is
 ``False``.
