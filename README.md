@@ -3,7 +3,7 @@ Static Comments Plus
 
 An advanced, more complete version of Pelican [Static Comments](https://github.com/getpelican/pelican-plugins/tree/master/static_comments) plugin.
 
->:warning: If you want to use the 'send form' function, a hosting server with PHP is needed!
+>:warning: If you plan to use the 'send form' function, a hosting server with PHP is needed!
 
 This plugin allows you to add static comments to an article.
 
