@@ -11,17 +11,20 @@ By default the plugin looks for the comments of each article in a local file nam
 ``Pelican_root_dir/comments/{slug}.md/rst``, where ``{slug}`` is the value of the slug tag for the
 article. The comments file should be formatted using ``markdown`` (.md) or ``reST`` (.rst).
 
-The comment will be delivered to your mailbox (optional: PHP enabled server needed) and you have to add it to the a.m. file. Basically it is
+The comment will be delivered to your mailbox (optional: PHP enabled server needed) and you have to add it manually to the a.m. file. Basically it is
 the same logic of a moderation queue. Viceversa you can ask your visitors to send comments via email like Static Comments default behaviour.
 
-Set the ``STATIC_COMMENTS`` parameter to True to enable the plugin. Default is
-False.
+PHP function and HTML form can be activated setting the parameter ``STATIC_COMMENTS_ACT`` to ``True``.
 
-Set the ``STATIC_COMMENTS_DIR`` parameter to the directory where the comments
+Set the ``STATIC_COMMENTS`` parameter to ``True`` to enable the plugin. Default is
+``False``.
+
+Set the ``STATIC_COMMENTS_DIR`` parameter to the directory path where comments
 are located. Default is ``comments``.
 
-Set the ``STATIC_COMMENTS_FMT`` parameter to ``rst`` if you will use reST for formatting, 
-or ``md`` if you will format comments using markdown. Default is ``rst``.
+Set the ``STATIC_COMMENTS_FMT`` parameter to ``md`` if you will use markdown for formatting. Default is ``rst``.
+
+TODO: fix the following in order to automate all the procedure...
 
 On the template side, you just have to add a section for the comments to your
 ``article.html``, as in this example:
