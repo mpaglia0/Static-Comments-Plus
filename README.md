@@ -1,5 +1,4 @@
-Static Comments Plus
---------------------
+##Static Comments Plus
 
 An advanced, more complete version of Pelican [Static Comments](https://github.com/getpelican/pelican-plugins/tree/master/static_comments) plugin.
 
@@ -24,25 +23,11 @@ are located. Default is ``comments``.
 
 Set the ``STATIC_COMMENTS_FMT`` parameter to ``md`` if you prefer to use markdown for formatting. Default is ``rst``.
 
-TODO: fix the following in order to automate all the procedure...
-
-On the template side, you just have to add a section for the comments to your
-``article.html``, as in this example:
-
-    {% if STATIC_COMMENTS %}
-      {% if article.metadata.static_comments %}
-        <section id="comments" class="body">
-        <h2>{{ 'Comments'|gettext(DEFAULT_LANG) }}</h2>
-        {{ article.metadata.static_comments }}
-        </section>
-      {% elif %}
-        <h2>{{ 'Would you like to be the first to leave a comment?'|gettext(DEFAULT_LANG) }}</h2>
-      {% endif %}
-    {% endif %}
+### PHP comment delivery and HTML form
 
 If you want to use the PHP part of this plugin you need to copy and configure the ``static/php/send-comment.php`` file.
 
-TODO: publish a template form
+TODO: fix the following in order to automate all the procedure...
 
 Here is an example of usage:
 
