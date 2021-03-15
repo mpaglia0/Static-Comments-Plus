@@ -18,7 +18,7 @@ The plugin can be activated setting the parameter ``STATIC_COMMENTS_PLS`` to ``T
 Set the ``STATIC_COMMENTS_DIR`` parameter to the directory path where comments
 are located. Default is ``comments``.
 
-Set the ``STATIC_COMMENTS_FMT`` parameter to ``md`` if you prefer to use markdown for formatting. Default is ``rst``.
+Set the ``STATIC_COMMENTS_FMT`` parameter to ``.md`` if you prefer to use markdown for formatting. Default is ``.rst`` (Note the initial dot!).
 
 ### PHP comment delivery and HTML form
 
