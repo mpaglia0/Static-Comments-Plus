@@ -47,16 +47,11 @@ and your ``comments_form.html`` should be similar to
 ```python
 <form action="script.php">
        <input type="hidden" id="title" name="title" value="{{ article.metadata.title }}" readonly><br>
-    <label for="fname">Name:</label><br>
+    <label for="fname">{{ 'Name'|gettext(DEFAULT_LANG) }}:</label><br>
        <input type="text" id="fname" name="fname" required><br>
-       <small>This field is mandatory</small><br><br>
-    <label for="web">Website:</label><br>
-       <input type="text" id="web" name="web"><br>
-       <small>This field is optional</small><br><br>
-    <label for="msg">Comment:</label><br>
-       <input type="text" id="msg" name="msg" required><br>
-       <small>This field is mandatory</small><br><br>
-    <input type="submit" value="Submit">
+       <small>{{ 'This field is mandatory'|gettext(DEFAULT_LANG) }}</small><br><br>
+    <label for="web">{{ 'Website'|gettext(DEFAULT_LANG) }}:</label><br>
+       <input type="text" id="web" name="web"><br>{{ 'Submit'|gettext(DEFAULT_LANG) }}">
 </form>
 ```
 
