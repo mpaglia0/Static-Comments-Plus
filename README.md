@@ -1,4 +1,4 @@
-##Static Comments Plus
+## Static Comments Plus
 
 An advanced, more complete version of Pelican [Static Comments](https://github.com/getpelican/pelican-plugins/tree/master/static_comments) plugin.
 
