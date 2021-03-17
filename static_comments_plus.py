@@ -13,19 +13,20 @@ def initialized(pelican):
     from pelican.settings import DEFAULT_CONFIG
     DEFAULT_CONFIG.setdefault('STATIC_COMMENTS_PLS', False)
     DEFAULT_CONFIG.setdefault('STATIC_COMMENTS_DIR' 'comments')
-    DEFAULT_CONFIG.setdefault('STATIC_COMMENTS_FMT' '.rst')
+    DEFAULT_CONFIG.setdefault('STATIC_COMMENTS_EXT' '.rst')
     if pelican:
         pelican.settings.setdefault('STATIC_COMMENTS_PLS', False)
         pelican.settings.setdefault('STATIC_COMMENTS_DIR', 'comments')
-        pelican.settings.setdefault('STATIC_COMMENTS_FMT', '.rst')
-
-if gen.settings['STATIC_COMMENTS_FMT'] == .md:
-   import markdown        
+        pelican.settings.setdefault('STATIC_COMMENTS_EXT', '.rst')       
 
 def add_static_comments(gen, metadata):
+    
+    if gen.settings['STATIC_COMMENTS_EXT'] == ".md":
+        import markdown 
+    
     if gen.settings['STATIC_COMMENTS_PLS'] != True:
         logger.warning("static_comments_plus: "
-                "Static Comments Plus plugin has NOT been activated...")
+                "Static Comments Plus plugin is installed but NOT activated...")
         return
 
     if not 'slug' in metadata:
@@ -33,8 +34,7 @@ def add_static_comments(gen, metadata):
                 "cant't locate comments file without slug tag in the article...")
         return
 
-    fname = os.path.join(gen.settings['STATIC_COMMENTS_DIR'],
-            metadata['slug'],gen.settings['STATIC_COMMENTS_FMT'])
+    fname = os.path.join(gen.settings['STATIC_COMMENTS_DIR'],metadata['slug'],gen.settings['STATIC_COMMENTS_EXT'])
 
     if not os.path.exists(fname):
         logger.warning("static_comments_plus: "
@@ -43,8 +43,7 @@ def add_static_comments(gen, metadata):
 
     input_file = codecs.open(fname, mode="r", encoding="utf-8")
     text = input_file.read()
-    if gen.settings['STATIC_COMMENTS_FMT'] == .md:
-       html = markdown.markdown(text)
+    html = markdown.markdown(text)   #TODO
     metadata['static_comments'] = html
 
 
