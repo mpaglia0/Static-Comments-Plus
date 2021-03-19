@@ -39,11 +39,12 @@ def add_static_comments(gen, metadata):
         return
 
     if gen.settings['STATIC_COMMENTS_EXT'] == ".md":
-        import markdown 
+        import markdown
+    import rst2html
     
     input_file = codecs.open(fname, mode="r", encoding="utf-8")
     text = input_file.read()
-    html = markdown.markdown(text)   #TODO: do the same for reST
+    html = markdown.markdown(text)   #TODO: do the same for reST html = rst2html.rst2html(text)
     metadata['static_comments'] = html
 
 
