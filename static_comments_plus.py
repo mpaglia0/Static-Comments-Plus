@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 
+from __future__ import unicode_literals
 import codecs
 import logging
 import os
+from docutils import nodes
+from docutils.parsers.rst import directives, Directive
 
 logger = logging.getLogger(__name__)
 
