@@ -1,6 +1,6 @@
 ## Static Comments Plus
 
-An advanced, more complete version of Pelican [Static Comments](https://github.com/getpelican/pelican-plugins/tree/master/static_comments) plugin.
+A more complete version of Pelican [Static Comments](https://github.com/getpelican/pelican-plugins/tree/master/static_comments) plugin.
 
 >:warning: a PHP capable hosting server is needed!
 
