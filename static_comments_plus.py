@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from __future__ import unicode_literals
 import codecs
 import logging
 import os
@@ -27,7 +28,7 @@ def add_static_comments(gen, metadata):
         return
 
     if not 'slug' in metadata:
-        logger.warning("static_comments_plus: "
+        logger.warning("Static_Comments_Plus: "
                 "cant't locate comments file without slug tag in the article...")
         return
 
@@ -39,13 +40,15 @@ def add_static_comments(gen, metadata):
         return
 
     if gen.settings['STATIC_COMMENTS_EXT'] == ".md":
-        import markdown 
+        import markdown
+    else
+        from docutils import nodes
+        from docutils.parsers.rst import directives, Directive
     
     input_file = codecs.open(fname, mode="r", encoding="utf-8")
     text = input_file.read()
-    html = markdown.markdown(text)   #TODO: do the same for reST
+    html = markdown.markdown(text)
     metadata['static_comments'] = html
-
 
 def register():
     signals.initialized.connect(initialized)
