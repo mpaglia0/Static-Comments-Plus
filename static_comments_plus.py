@@ -24,12 +24,12 @@ def add_static_comments(gen, metadata):
   
     if gen.settings['STATIC_COMMENTS_PLS'] != True:
         logger.warning("static_comments_plus: "
-                "Static Comments Plus plugin is installed but NOT activated...")
+                "plugin is installed but NOT activated...")
         return
 
     if not 'slug' in metadata:
         logger.warning("Static_Comments_Plus: "
-                "cant't locate comments file without slug tag in the article...")
+                "cant't locate slug tag in the article...")
         return
 
     fname = os.path.join(gen.settings['STATIC_COMMENTS_DIR'],metadata['slug'],gen.settings['STATIC_COMMENTS_EXT'])
