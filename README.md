@@ -55,6 +55,6 @@ and, finally, your ``comments_form.html`` should be similar to
 </form>
 ```
 
-A working example can be found in Pelican [**Z theme**](https://github.com/mpaglia0/Z)
+A working example can be found in [Pelican **Z** theme](https://github.com/mpaglia0/Z)
 
 Enjoy!
