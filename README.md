@@ -7,7 +7,7 @@ A more complete version of Pelican [Static Comments](https://github.com/getpelic
 This plugin allows you to add static comments to articles.
 
 By default the plugin looks for the comments of each article in a local file named
-``Pelican_root_dir/comments/{slug}.md/.rst``, where ``{slug}`` is the value of the slug tag for the
+``Pelican_root_dir/comments/{slug}.md or .rst``, where ``{slug}`` is the value of the slug tag for the
 article. The comment files should be formatted using ``markdown`` (.md) or ``reST`` (.rst).
 
 Each comment will be delivered to your mailbox (a PHP capable server needed) and you have to add it manually to the a.m. file. Basically it is
