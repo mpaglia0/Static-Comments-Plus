@@ -28,14 +28,17 @@ def add_static_comments(gen, metadata):
     if not 'slug' in metadata:
         logger.warning("Static_Comments_Plus: "
                 "cant't locate comments file without slug tag in the article!")
-        
-    no_comment_msg = "Static_Comments_Plus: NO comments file for ... " + metadata['slug']
-    
+
+    no_comment_msg = ""
+    #no_comment_msg = "Static_Comments_Plus: NO comments file for ... " + metadata['slug']
+
     parse_mode = gen.settings.get('STATIC_COMMENTS_SOURCE', 'MD')
+
     if parse_mode not in ['RST', 'MD']:
         logger.warning("Static_Comments_Plus: "
                 "Invalid option {} as the plugin option... "
                 "STATIC_COMMENTS_SOURCE can only be set to MD or RST. Defaulting to MD".format(parse_mode))
+
     if parse_mode == 'RST':
         logger.info('Static_Comments_Plus: comment parser is set to RST')
         fname = os.path.join(gen.settings['STATIC_COMMENTS_DIR'], metadata['slug'] + ".rst")
@@ -47,8 +50,8 @@ def add_static_comments(gen, metadata):
         logger.info("Static_Comments_Plus: RST comment file opened")
 
     else:  # the default parser is Markdown parser, hence 'MD'
-        fname = os.path.join(gen.settings['STATIC_COMMENTS_DIR'], metadata['slug'] + ".md")
         logger.info('Static_Comments_Plus: comment parser is set to MD')
+        fname = os.path.join(gen.settings['STATIC_COMMENTS_DIR'], metadata['slug'] + ".md")
         if not os.path.exists(fname):
             logger.info(no_comment_msg)
             return
@@ -57,7 +60,7 @@ def add_static_comments(gen, metadata):
         text = input_file.read()
         html = markdown.markdown(text)
 
-    # logger.info(html)
+    #logger.info(html)
     metadata['static_comments'] = html
 
 
