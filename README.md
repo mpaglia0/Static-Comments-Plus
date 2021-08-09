@@ -2,15 +2,15 @@
 
 A more complete version of Pelican [Static Comments](https://github.com/getpelican/pelican-plugins/tree/master/static_comments) plugin.
 
->:warning: a PHP capable hosting server is needed!
+>:warning: a PHP capable hosting server is needed if you desire to use the send-comment utility!
 
 This plugin allows you to add static comments to articles.
 
-By default the plugin looks for the comments of each article in a local file named
+By default the plugin looks for any comments of each article in a local file named
 ``Pelican_root_dir/comments/{slug}.md or .rst``, where ``{slug}`` is the value of the slug tag for the
 article. The comment files should be formatted using ``markdown`` (.md) or ``reST`` (.rst).
 
-Users comments will be delivered to your mailbox (a PHP capable server needed) and you have to add it manually to the a.m. file. Basically it is
+Users comments can be delivered to your mailbox (a PHP capable server needed) and you have to add it manually to the a.m. file. Basically it is
 the same logic of a moderation queue...
 
 The plugin can be activated setting the parameter ``STATIC_COMMENTS_PLS`` to ``True``.
